@@ -1,0 +1,14 @@
+[Unit]
+Description=FFT Runner Script Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/pi/fftManager.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+[Journal]
+Storage=volatile
